@@ -1,0 +1,11 @@
+import io.appium.java_client.android.AndroidDriver;
+
+public class Basics extends Base{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		AndroidDriver<AndroidElement> driver = Capabilities();
+	}
+
+}

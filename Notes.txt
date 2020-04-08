@@ -1,0 +1,14 @@
+1. When there is a special character in class like , then xpath will not find element and will throw an error. In these cases you can provide * as tagname
+2. findElementByAndroidUIAutomator doesn't work with browser apps as it is related to android apps
+3. "adb devices" command to list out all the devices connected to your system(including emulator & real mobile devices)
+	If adb devices command shows Unauthorized status, then perform following steps:
+	adb kill-server
+	adb start-server
+	adb devices
+	Then click on pop-up on mobile
+4. To install any apk you can either use 
+	a. java code or
+	b. go to platform-tools folder in cmd and use command adb install <path of apk>
+5. Android devolpers usually use "android.widget.Toast" class to create toast messages. Also they use name as attribute for toast message text
+	To get Toast msg text in appium we can use this - driver.findElementByXPath("//android.widget.Toast[1]").getAttribute("name");
+	If there are n number of toast messages simpley use //android.widget.Toast[n] 

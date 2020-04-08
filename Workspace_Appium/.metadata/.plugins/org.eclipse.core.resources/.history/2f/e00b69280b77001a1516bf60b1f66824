@@ -1,0 +1,25 @@
+package AppiumLearning;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.WebElement;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class DragAndDrop extends Base{
+
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO Auto-generated method stub
+		
+		AndroidDriver<AndroidElement> driver = capabilities();
+		driver.findElementByAndroidUIAutomator("text(\"Views\")").click();
+		driver.findElementByAndroidUIAutomator("text(\"Drag and Drop\")").click();
+		
+		WebElement ele1 = driver.findElementByAndroidUIAutomator("resource-id(\"io.appium.android.apis:id/drag_dot_1\")");
+		WebElement ele2 = driver.findElementByAndroidUIAutomator("resource-id(\"io.appium.android.apis:id/drag_dot_2\")");
+		WebElement ele3 = driver.findElementByAndroidUIAutomator("resource-id(\"io.appium.android.apis:id/drag_dot_3\")");
+		
+	}
+
+}

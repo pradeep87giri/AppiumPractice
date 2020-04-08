@@ -1,0 +1,31 @@
+package appiumLearning;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class Browser extends Base {
+
+	public static void main(String[] args) throws MalformedURLException{
+		// TODO Auto-generated method stub
+		AndroidDriver<AndroidElement> driver = getBrowserDriver("real");
+//		driver.get("http://facebook.com");
+//		driver.findElementByXPath("//input[@id='m_login_email']").sendKeys("hello");
+//		driver.findElementByXPath("//input[@id='m_login_password']").sendKeys("hello");
+//		driver.findElementByXPath("//button[@name='login']").click();
+		
+		
+		driver.get("http://cricbuzz.com");
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("window.scrollBy(0,1000)");
+		WebElement ele = driver.findElementByXPath("//a[text()='Players']");
+		js.executeScript("arguments[0].scrollIntoView(true);", ele);
+		System.out.println(driver.findElementByXPath("//a[text()='Players']").getAttribute("href"));
+		driver.findElementByXPath("//a[@title='Player Profile Search']").click();
+	}
+
+}

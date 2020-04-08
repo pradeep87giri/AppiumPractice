@@ -1,0 +1,10 @@
+package AppiumLearning;
+
+public class Swipe extends Base{
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package AppiumLearning;
+
+public class Miscelleneous {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
